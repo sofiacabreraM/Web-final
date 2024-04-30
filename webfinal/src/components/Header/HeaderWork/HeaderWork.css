@@ -1,0 +1,74 @@
+.herowork-img {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.herotext-work {
+  font-family: "MangoGrotesqueBlack", sans-serif;
+
+  color: #fff;
+  position: absolute;
+
+  text-align: center;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+
+.hero-work {
+  position: relative;
+}
+
+/* hero-footer */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+}
+.hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10%;
+}
+
+/* Quita los estilos predeterminados del dropdown */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+select:hover,
+select:focus {
+  border-color: #999; /* Cambia el color del borde al pasar el mouse o al enfocar */
+}
+
+.hero-footer {
+  border-radius: 0px 0px 50px 50px;
+  background: #ffbddb;
+  padding: 5%;
+  margin: -0.5%;
+}
