@@ -70,5 +70,5 @@ select:focus {
   border-radius: 0px 0px 50px 50px;
   background: #ffbddb;
   padding: 5%;
-  margin: -0.5%;
+  margin: -0.5% 0%;
 }

@@ -19,7 +19,7 @@ export function HeaderWork() {
       <section className="hero-footer">
         <div className="right">
           <b>Sort by</b>
-          <label for="author">Author</label>
+          <label htmlFor="author">Author</label>
 
           <select name="author" id="author">
             <option value="mariapaula">Maria Paula</option>
@@ -28,7 +28,7 @@ export function HeaderWork() {
             <option value="lina">Lina</option>
           </select>
 
-          <label for="project">Type of project</label>
+          <label htmlFor="project">Type of project</label>
 
           <select name="project" id="project">
             <option value="brand">Brand Design</option>
