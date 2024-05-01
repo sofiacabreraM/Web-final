@@ -1,0 +1,17 @@
+.header-container {
+    display: flex;
+    background-color: #5534F5;
+    height: 120px;
+    margin: 0;
+}
+
+.principal-container {
+    background-color: #5534F5;
+    height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
