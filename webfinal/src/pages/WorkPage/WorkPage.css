@@ -249,3 +249,11 @@ select option:checked {
     color: #080223;
     border: 1px solid #080223;
 }
+
+.error-upload {
+    font-family: "Inter", sans-serif;
+    color: #080223;    
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+}
