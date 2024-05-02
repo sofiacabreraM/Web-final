@@ -2,9 +2,23 @@ import './WorkPage.css'
 
 import { Header } from '../../components/Header/Header'
 import { Footer } from '../../components/Footer/Footer'
+import { useState } from 'react';
 import vectorpink from '../../assets/vector-pink.png'
 
 export function Upload() {
+    const [ImageSelectedPrevious, setImageSelectedPrevious] = useState(null)
+    const changeImage = (e) => {
+      console.log(e.target.files);
+      if (e.target.files[0] !== undefined) {
+        const reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = (e) => {
+          e.preventDefault();
+          setImageSelectedPrevious(e.target.result);
+        };
+      }
+    };
+
     return (
         <>
             <Header/>
@@ -22,8 +36,30 @@ export function Upload() {
                 <div className='upload-rectangle'>
                     <div className='upload-text'>
                         <h3>Upload media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                        <button className="upload-btn" href=" ">Upload</button>
+                        <p>Drag and drop your files here or click the 'Upload' button to select PNG or JPG files from your device.</p>
+                        <div className='upload-button'>
+                        <label htmlFor="file-upload" className="upload-btn">
+                            Upload
+                        </label>
+                        <input
+                            id="file-upload"
+                            type="file"
+                            accept="image/*"
+                            multiple
+                            onChange={(e) => {
+                                changeImage(e);
+                            }}
+                            style={{ display: "none" }}
+                        />
+                        </div>
+                    </div>
+                    <div className="image-preview">
+                    <img
+                        src={ImageSelectedPrevious}
+                        alt=""
+                        height="150px"
+                        width="250px"
+                    />
                     </div>
                 </div>
                 <div className='cover-container'>
@@ -43,36 +79,40 @@ export function Upload() {
                 <div className='menus'>
                     <div className='project-menu'>
                     <h4>Type of project</h4>
-                        <nav id="project">
-                            <ul>
-                                <li><a href="#">Enlace 1</a></li>
-                                <li><a href="#">Enlace 2</a></li>
-                                <li><a href="#">Enlace 3</a></li>
-                                <li><a href="#">Enlace 4</a></li>
-                                <li><a href="#">Enlace 5</a></li>
-                            </ul>
-                        </nav>
+                        <select className="project">
+                        <option value="" disabled selected hidden>Select an option</option>
+                            <option value="ux-ui">UX / UI Project</option>
+                            <option value="graphic">Graphic Project</option>
+                            <option value="brand">Brand Project</option>
+                        </select>
                     </div>
                     <div className='author-menu'>
                         <h4>Author(s)</h4>
-                        <nav id="author">
-                            <ul>
-                                <li><a href="#">Enlace 1</a></li>
-                                <li><a href="#">Enlace 2</a></li>
-                                <li><a href="#">Enlace 3</a></li>
-                                <li><a href="#">Enlace 4</a></li>
-                                <li><a href="#">Enlace 5</a></li>
-                            </ul>
-                        </nav>
+                        <select className="author">
+                        <option value="" disabled selected hidden>Select an option</option>
+                            <option value="caro">Carolina Velásquez</option>
+                            <option value="lina">Lina Manjarrez</option>
+                            <option value="pau">María Paula Ortiz</option>
+                            <option value="sofi">Sofía Cabrera</option>
+                        </select>
                     </div>
                 </div>
                 <div className='buttons'>
                     <button className="draft-btn" href=" ">Save as draft</button>
                     <button className="publish-btn" href=" ">Publish</button>
-
                 </div>
             </div>
             <Footer/>
         </>
     )
 }
+
+/*
+<label for="dog-names">Choose a dog name:</label>
+<select name="dog-names" id="dog-names">
+    <option value="rigatoni">Rigatoni</option>
+  <option value="dave">Dave</option>
+  <option value="pumpernickel">Pumpernickel</option>
+  <option value="reeses">Reeses</option>
+</select>
+*/

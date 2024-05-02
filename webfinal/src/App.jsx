@@ -5,7 +5,7 @@ import { ContactUs } from './pages/ContactUsPage/ContactUsPage';
 export function App() {
   return(
       <div>
-        <ContactUs/>
+        <Upload/>
       </div>
   )
 }
