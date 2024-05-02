@@ -51,7 +51,6 @@ export function ContactUs() {
     return (
         <>
         <Header/>
-        <div className='header-container'></div>
         <div className='principal-container'>
             <div className='title-container'>
                 <div className='subtitle-form'>

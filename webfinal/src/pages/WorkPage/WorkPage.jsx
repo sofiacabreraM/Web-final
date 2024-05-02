@@ -3,7 +3,6 @@ import './WorkPage.css'
 import { Header } from '../../components/Header/Header'
 import { Footer } from '../../components/Footer/Footer'
 import { useState } from 'react';
-import vectorpink from '../../assets/vector-pink.png'
 
 export function Upload() {
     const [title, setTitle] = useState('');
@@ -16,11 +15,11 @@ export function Upload() {
     const handleSendClick = () => {
         if (!title || !image || !description || !project || !author) {
             setError('Please fill in all fields');
-            if (!title) setError('Please fill title');
-            if (!description) setError('Please fill description');
-            if (!image) setError('Please select an image');
-            if (!project) setError('Please select a type of proyect');
-            if (!author) setError('Please select an author');
+                if (!title) setError('Please fill title');
+                if (!description) setError('Please fill description');
+                if (!image) setError('Please select an image');
+                if (!project) setError('Please select a type of proyect');
+                if (!author) setError('Please select an author');
             return;
         }
 
@@ -58,7 +57,6 @@ export function Upload() {
                 <div className='text-banner'>
                     <h1>UPLOAD A  NEW PROJECT <br/> SUCCESS AWAITS.</h1>
                 </div>
-                <img src={vectorpink}/>
             </div>
             <div className='upload-container'>
                 <div className='title'>
