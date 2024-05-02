@@ -53,7 +53,7 @@ export function Upload() {
                         />
                         </div>
                     </div>
-                    <div className="image-preview">
+                    <div className="image-preview" style={{ display: ImageSelectedPrevious ? 'block' : 'none' }}>
                     <img
                         src={ImageSelectedPrevious}
                         alt=""
