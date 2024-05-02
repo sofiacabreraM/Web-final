@@ -1,0 +1,108 @@
+ *{
+    font-family: "Inter";
+ }
+.top-container {
+    display: flex;
+  }
+  .bottom-container {
+    display: flex;
+  }
+  
+.container-maria{
+    background-image: url("../../../../public/imgs/OurPeople/biografia-maria.png");
+    width: 50%;
+    color: white;
+    height: 800px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+   
+}
+.container-sofia{
+    background-image: url("../../../../public/imgs/OurPeople/biografia-sofy.png");
+    width: 50%;
+    color: white;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+.container-caro{
+    background-image: url("../../../../public/imgs/OurPeople/biografia-caro.png");
+    width: 50%;
+    color: white;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+.container-lina{
+    background-size: cover;
+    background-image: url("../../../../public/imgs/OurPeople/biografia-lina.png");
+    width: 50%;
+    color: white;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+
+.nombres{
+    text-align: left;
+    margin-left: 5%;
+    font-family: 'Inter Black';
+    font-weight: bold; 
+    font-size: 30px;
+}
+.specializations{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 20px;
+}
+.general-div-bio p{
+    text-align: left;
+    margin-left: 5%;  
+    font-size: 20px;
+    margin-right: 25%;
+    
+}
+@media only screen and (max-width: 600px) {
+    .top-container {
+      flex-direction: column; 
+    }
+    .bottom-container{
+        flex-direction: column;
+    }
+  
+    .container-maria,
+    .container-sofia,
+    .container-caro,
+    .container-lina {
+       background-size: cover;
+      width: 100%; 
+    }
+  }
+  
+  .nombre{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 17px;
+    font-weight: bold; 
+  }
+  .specialization{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 17px;
+  }
+  
+  .general-div-bio p {
+    text-align: left;
+    margin-left: 5%;  
+  }

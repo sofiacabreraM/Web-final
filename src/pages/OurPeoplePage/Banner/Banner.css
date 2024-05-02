@@ -1,0 +1,72 @@
+* {
+  font-family: 'Inter';
+}
+
+.General-Div-Banner {
+  position: relative;
+  background-image: url('../../../../public/imgs/fondoBanner.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.General-Div-Banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.General-Div-Banner h6 {
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 20px;
+  letter-spacing: 8px;
+}
+
+.General-Div-Banner h1 {
+  margin-right: 5%;
+  font-family: 'Mango Grotesque';
+  font-weight: bold;
+  font-size: 80px;
+  margin-left: 5%;
+  width: 50%;
+}
+
+.General-Div-Banner p {
+  margin-right: 5%;
+  font-size: 30px;
+  margin-left: 5%;
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .General-Div-Banner {
+    width: 100%;
+  }
+  
+ 
+  .General-Div-Banner h6,
+  .General-Div-Banner h1,
+  .General-Div-Banner p {
+    text-align: center;
+  }
+
+  .General-Div-Banner h6 {
+    font-size: 16px;
+  }
+
+  .General-Div-Banner h1 {
+    font-size: 40px;
+    width: auto;
+  }
+
+  .General-Div-Banner p {
+    font-size: 20px;
+  width: auto;
+  }
+}
